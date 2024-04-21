@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Example</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Fill all the required (<span class="as">*</span>) fields:</p>
+    <form id="form">
+        <div class="form-group">
+        <label for="first-name">First Name:</label><span class="as">*</span>
+        <input type="text" id="first-name" placeholder="Enter your first name" required><br><br>
+
+        <label for="last-name">Last Name:</label><span class="as">*</span>
+        <input type="text" id="last-name" placeholder="Enter your last name" required><br><br>
+
+        <label for="address">Address:</label><span class="as">*</span><br>
+        <textarea id="address" placeholder="Enter your address" required></textarea><br><br>
+
+        <label for="pincode">Pincode:</label><span class="as">*</span><br>
+        <input type="text" id="pincode" placeholder="Enter your pincode" required><br><br>
+
+        <label for="gender">Gender:</label><span class="as">*</span><br>
+        <input type="radio" id="gender" name="gender" value="male" required> Male
+        <input type="radio" id="gender" name="gender" value="female"> Female<br><br>
+
+        <label for="food" >Choice of Food (Select at least 2):<span class="as">*</span></label>&nbsp;&nbsp;<span id= "food-error"></span><br>
+        <input type="checkbox" name="food" value="pizza"> Idly
+       <br> <input type="checkbox" name="food" value="burger"> Dosa
+        <br><input type="checkbox" name="food" value="sushi"> Biriyani
+        <br><input type="checkbox" name="food" value="pasta"> Curd Rise
+        <br><input type="checkbox" name="food" value="salad"> Chappati <br><br>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" placeholder="Enter your state"><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" placeholder="Enter your country"><br><br>
+
+        <input type="submit" id="submit" value="Submit" class="btn btn-primary">
+        <input type="reset" id="reset" value="Reset" class="btn btn-primary">
+    </div>
+    </form>
+
+    <div>
+        <h2>Submitted Data</h2>
+        <table id="details" class="table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"> </script>
+
+</body>
+</html>
